@@ -13,7 +13,7 @@ export const action = async ({ request }) => {
         return redirect('/')
     }
     catch (error) {
-        console.log(error)
+
         toast.error("Error")
         return error
     }
@@ -22,7 +22,6 @@ export const action = async ({ request }) => {
 const NewsLetter = () => {
     const navigation = useNavigation()
     const isSubmitting = navigation.state == 'submitting'
-    console.log(navigation)
     return (
         <Form className='form' method='POST'>
             <h4 style={{ textAlign: 'center', marginBottom: '2rem' }}>
